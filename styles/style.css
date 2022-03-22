@@ -163,7 +163,7 @@ main div {
     display:flex;
     flex-flow: wrap;
     justify-content: space-evenly;
-    width: 800px;
+    width: 600px;
 }
 
 .league {
