@@ -6,3 +6,25 @@
     <p>Shoots: Left</p>
     <p>Draft: 2011 (COL), 2nd overall</p>
 </div> */}
+
+export function renderAvsPlayer(avs) {
+    const playerCard = document.createElement('div');
+    const nameEl = document.createElement('h3');
+    const imgEl = document.createElement('img');
+    const infoEl = document.createElement('p');
+    const nationalityEl = document.createElement('p');
+    const shootsEl = document.createElement('p');
+    const draftEl = document.createElement('p');
+
+    playerCard.classList.add('avs-player');
+    nameEl.textContent = avs.name;
+    imgEl.src = avs.headshot;
+    infoEl.textContent = avs.position + ' | ' + avs.height[0] + `'` + avs.height[1] + ' | ' + avs.weight + ' lb | Age: ' + avs.age;
+    shootsEl.textContent = avs.name;
+    nationalityEl.textContent = avs.nationality;
+    draftEl.textContent = avs.draft[0] + ' (' + avs.draft[1] + '), ' + avs.draft[2];
+
+    playerCard.append(nameEl, imgEl, infoEl, nationalityEl, shootsEl, draftEl);
+
+    return playerCard;
+}
