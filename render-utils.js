@@ -20,9 +20,9 @@ export function renderAvsPlayer(avs) {
     nameEl.textContent = avs.name;
     imgEl.src = avs.headshot;
     infoEl.textContent = avs.position + ' | ' + avs.height[0] + `'` + avs.height[1] + ' | ' + avs.weight + ' lb | Age: ' + avs.age;
-    shootsEl.textContent = avs.name;
+    shootsEl.textContent = 'Shoots: ' + avs.shoots;
     nationalityEl.textContent = avs.nationality;
-    draftEl.textContent = avs.draft[0] + ' (' + avs.draft[1] + '), ' + avs.draft[2];
+    draftEl.textContent = 'Draft: ' + avs.draft[0] + ' (' + avs.draft[1] + '), ' + avs.draft[2];
 
     playerCard.append(nameEl, imgEl, infoEl, nationalityEl, shootsEl, draftEl);
 
