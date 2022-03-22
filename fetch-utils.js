@@ -19,6 +19,14 @@ export async function getRpgClasses() {
     return checkError(response);
 }
 
+export async function getDogs() {
+    const response = await client
+        .from('dog_breeds')
+        .select('*');
+
+    return checkError(response);
+}
+
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
