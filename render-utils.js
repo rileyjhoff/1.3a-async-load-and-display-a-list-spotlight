@@ -73,3 +73,78 @@ export function renderRpgClass(rpg) {
 
     return classCard;
 }
+
+{/* <div class="dog">
+    <h3>German Shepherd</h3>
+    <img src="https://ubrpbqqozfkjakttjedg.supabase.in/storage/v1/object/sign/dogs/german-shepherd.jpeg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJkb2dzL2dlcm1hbi1zaGVwaGVyZC5qcGVnIiwiaWF0IjoxNjQ3OTg3MzAyLCJleHAiOjE5NjMzNDczMDJ9.B9251EPouwTNDm3xwNf_m745OKoi74StO4xefTAkKpg" alt="">
+    <div class="dog-stats">
+        <div>
+            <h4>Dog Breed Group:</h4>
+            <p>Herding Dogs</p>
+        </div>
+        <div>
+            <h4>Weight:</h4>
+            <p>75 to 95 pounds</p>
+        </div>
+        <div>
+            <h4>Lifespan:</h4>
+            <p>10 to 14 years</p>
+        </div>
+        <div>
+            <h4>Personality Traits:</h4>
+            <ul>
+                <li>aloof</li>
+                <li>intelligent</li>
+                <li>loyal</li>
+            </ul>
+        </div>
+    </div>
+</div> */}
+
+export function renderDog(dog) {
+    const dogCard = document.createElement('div');
+    const nameEl = document.createElement('h3');
+    const imgEl = document.createElement('img');
+    const statsDiv = document.createElement('div');
+    const groupDiv = document.createElement('div');
+    const groupHeader = document.createElement('h4');
+    const groupEl = document.createElement('p');
+    const weightDiv = document.createElement('div');
+    const weightHeader = document.createElement('h4');
+    const weightEl = document.createElement('p');
+    const lifespanDiv = document.createElement('div');
+    const lifespanHeader = document.createElement('h4');
+    const lifespanEl = document.createElement('p');
+    const personalityDiv = document.createElement('div');
+    const personalityHeader = document.createElement('h4');
+    const personalityList = document.createElement('ul');
+
+    dogCard.classList.add('dog');
+    statsDiv.classList.add('dog-stats');
+    nameEl.textContent = dog.breed;
+    imgEl.src = dog.img;
+    groupHeader.textContent = 'Dog Breed Group:';
+    groupEl.textContent = dog.group;
+    weightHeader.textContent = 'Adult Weight:';
+    weightEl.textContent = dog.weight;
+    lifespanHeader.textContent = 'Lifespan:';
+    lifespanEl.textContent = dog.lifespan;
+    personalityHeader.textContent = 'Personality Traits:';
+
+    for (let trait of dog.traits) {
+        const traitEl = document.createElement('li');
+        traitEl.textContent = trait;
+        personalityList.appendChild(traitEl);
+    }
+
+    groupDiv.append(groupHeader, groupEl);
+    weightDiv.append(weightHeader, weightEl);
+    lifespanDiv.append(lifespanHeader, lifespanEl);
+    personalityDiv.append(personalityHeader, personalityList);
+
+    statsDiv.append(groupDiv, weightDiv, lifespanDiv, personalityDiv);
+
+    dogCard.append(nameEl, imgEl, statsDiv);
+
+    return dogCard;
+}
