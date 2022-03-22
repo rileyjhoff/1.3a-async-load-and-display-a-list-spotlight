@@ -165,7 +165,7 @@ export function renderSportsLeague(league) {
     const revenueEl = document.createElement('p');
 
     leagueCard.classList.add('league');
-    imgDiv.classList.add('logo');
+    imgDiv.classList.add('league-logo');
     nameEl.textContent = league.league;
     imgEl.src = league.logo;
     imgDiv.appendChild(imgEl);
