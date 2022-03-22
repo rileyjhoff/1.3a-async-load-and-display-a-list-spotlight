@@ -148,3 +148,28 @@ export function renderDog(dog) {
 
     return dogCard;
 }
+
+{/* <div class="league">
+    <h3>NFL</h3>
+    <img src="https://ubrpbqqozfkjakttjedg.supabase.in/storage/v1/object/sign/logos/National_Football_League_logo.svg.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJsb2dvcy9OYXRpb25hbF9Gb290YmFsbF9MZWFndWVfbG9nby5zdmcucG5nIiwiaWF0IjoxNjQ3OTkxMDYzLCJleHAiOjE5NjMzNTEwNjN9.x597yUfA-LMVAr-qIWW1vf5FpqetfIiLH21DZUiYMTo" alt="">
+    <p>Founded in 1920 | 32 Teams</p>
+    <p>Annual Revenue: $15.3 Billion</p>
+</div> */}
+
+export function renderSportsLeague(league) {
+    const leagueCard = document.createElement('div');
+    const nameEl = document.createElement('h3');
+    const imgEl = document.createElement('img');
+    const infoEl = document.createElement('p');
+    const revenueEl = document.createElement('p');
+
+    leagueCard.classList.add('league');
+    nameEl.textContent = league.league;
+    imgEl.src = league.logo;
+    infoEl.textContent = 'Founded in ' + league.founded + ' | ' + league.teams + ' Teams';
+    revenueEl.textContent = 'Annual Revenue: ' + league.revenue;
+
+    leagueCard.append(nameEl, imgEl, infoEl, revenueEl);
+
+    return leagueCard;
+}
