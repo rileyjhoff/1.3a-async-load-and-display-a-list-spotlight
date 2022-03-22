@@ -1,8 +1,9 @@
 // import functions and grab DOM elements
-import { getAvsPlayers } from './fetch-utils.js';
-import { renderAvsPlayer } from './render-utils.js';
+import { getAvsPlayers, getRpgClasses } from './fetch-utils.js';
+import { renderAvsPlayer, renderRpgClass } from './render-utils.js';
 
 const avsPlayersEl = document.querySelector('.avs-players');
+const rpgClassesEl = document.querySelector('.rpg-classes');
 
 // let state
 
@@ -14,6 +15,7 @@ const avsPlayersEl = document.querySelector('.avs-players');
 
 window.addEventListener('load', async () => {
     fetchAndDisplayAvsPlayers();
+    fetchAndDisplayRpgClasses();
 });
 
 async function fetchAndDisplayAvsPlayers() {
@@ -22,5 +24,14 @@ async function fetchAndDisplayAvsPlayers() {
         const avsPlayerCard = renderAvsPlayer(avs);
 
         avsPlayersEl.append(avsPlayerCard);
+    }
+}
+
+async function fetchAndDisplayRpgClasses() {
+    const rpgClasses = await getRpgClasses();
+    for (let rpg of rpgClasses) {
+        const classCard = renderRpgClass(rpg);
+
+        rpgClassesEl.append(classCard);
     }
 }

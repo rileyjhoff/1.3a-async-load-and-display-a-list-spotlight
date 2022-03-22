@@ -71,9 +71,14 @@ footer {
     box-shadow: var(--shadow);
 }
 
+main div {
+    margin: 15px 0px;
+}
+
 .avs-players {
     display:flex;
     flex-flow: wrap;
+    justify-content: space-evenly;
     width: 800px;
 }
 
@@ -97,12 +102,20 @@ footer {
 .rpg-classes {
     display:flex;
     flex-flow: wrap;
+    justify-content: space-evenly;
+    width: 800px;
 }
 
 .rpg-class {
     padding: 20px;
     box-shadow: var(--shadow);
     margin: 5px;
+    height: 275px;
+    width: 182px;
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
 }
 
 .rpg-class ul {
@@ -112,4 +125,14 @@ footer {
 
 .rpg-class h3 {
     text-align: center;
+}
+
+.role {
+    position: absolute;
+    top: 85px;
+}
+
+.specialization {
+    position: absolute;
+    bottom: 10px;
 }

@@ -50,9 +50,14 @@ export function renderRpgClass(rpg) {
     const specializationsEl = document.createElement('ul');
 
     classCard.classList.add('rpg-class');
-    nameEl.textContent = rpg.class;
+    rolesEl.classList.add('role');
+    specializationsEl.classList.add('specialization');
+    nameEl.textContent = rpg.class + ' ';
     imgEl.src = rpg.img;
     nameEl.append(imgEl);
+    rolesEl.textContent = 'Role:';
+
+    specializationsEl.textContent = 'Specialization:';
     for (let role of rpg.role) {
         const roleEl = document.createElement('li');
         roleEl.textContent = role;
