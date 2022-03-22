@@ -52,6 +52,10 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    text-align: center;
+}
+
 .gutter-right {
     margin-right: 20px;
 }
@@ -89,7 +93,7 @@ main div {
     margin: 5px;
 }
 
-.avs-player p, .avs-player h3 {
+.avs-player p {
     text-align: center;
 }
 
@@ -113,18 +117,11 @@ main div {
     height: 275px;
     width: 182px;
     position: relative;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
 }
 
 .rpg-class ul {
     list-style-type: circle;
     list-style-position: inside;
-}
-
-.rpg-class h3 {
-    text-align: center;
 }
 
 .role {
@@ -135,4 +132,30 @@ main div {
 .specialization {
     position: absolute;
     bottom: 10px;
+}
+
+.dogs {
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    width: 800px;
+}
+
+.dog {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin: 5px;
+    position: relative;
+}
+
+.dog-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: grey 1px solid;
+    border-radius: 10px;
+}
+
+.dog-stats p, .dog-stats h4, .dog-stats li {
+    text-align: center;
 }
