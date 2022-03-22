@@ -159,17 +159,20 @@ export function renderDog(dog) {
 export function renderSportsLeague(league) {
     const leagueCard = document.createElement('div');
     const nameEl = document.createElement('h3');
+    const imgDiv = document.createElement('div');
     const imgEl = document.createElement('img');
     const infoEl = document.createElement('p');
     const revenueEl = document.createElement('p');
 
     leagueCard.classList.add('league');
+    imgDiv.classList.add('logo');
     nameEl.textContent = league.league;
     imgEl.src = league.logo;
+    imgDiv.appendChild(imgEl);
     infoEl.textContent = 'Founded in ' + league.founded + ' | ' + league.teams + ' Teams';
     revenueEl.textContent = 'Annual Revenue: ' + league.revenue;
 
-    leagueCard.append(nameEl, imgEl, infoEl, revenueEl);
+    leagueCard.append(nameEl, imgDiv, infoEl, revenueEl);
 
     return leagueCard;
 }

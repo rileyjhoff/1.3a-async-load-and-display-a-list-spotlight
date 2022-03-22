@@ -1,10 +1,12 @@
 // import functions and grab DOM elements
-import { getAvsPlayers, getRpgClasses, getDogs } from './fetch-utils.js';
-import { renderAvsPlayer, renderRpgClass, renderDog } from './render-utils.js';
+import { getAvsPlayers, getRpgClasses, getDogs, getLeagues } from './fetch-utils.js';
+import { renderAvsPlayer, renderRpgClass, renderDog, renderSportsLeague } from './render-utils.js';
 
 const avsPlayersEl = document.querySelector('.avs-players');
 const rpgClassesEl = document.querySelector('.rpg-classes');
 const dogBreedsEl = document.querySelector('.dogs');
+const sportsLeaguesEl = document.querySelector('.sports-leagues');
+
 
 // let state
 
@@ -18,6 +20,7 @@ window.addEventListener('load', async () => {
     fetchAndDisplayAvsPlayers();
     fetchAndDisplayRpgClasses();
     fetchAndDisplayDogBreeds();
+    fetchAndDisplaySportsLeagues();
 });
 
 async function fetchAndDisplayAvsPlayers() {
@@ -44,5 +47,14 @@ async function fetchAndDisplayDogBreeds() {
         const dogCard = renderDog(dog);
 
         dogBreedsEl.append(dogCard);
+    }
+}
+
+async function fetchAndDisplaySportsLeagues() {
+    const leagues = await getLeagues();
+    for (let league of leagues) {
+        const leagueCard = renderSportsLeague(league);
+
+        sportsLeaguesEl.append(leagueCard);
     }
 }
