@@ -11,6 +11,14 @@ export async function getAvsPlayers() {
     return checkError(response);
 }
 
+export async function getRpgClasses() {
+    const response = await client
+        .from('rpg_classes')
+        .select('*');
+
+    return checkError(response);
+}
+
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
