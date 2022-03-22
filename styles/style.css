@@ -145,7 +145,6 @@ main div {
     padding: 20px;
     box-shadow: var(--shadow);
     margin: 5px;
-    position: relative;
 }
 
 .dog-stats {
@@ -157,5 +156,28 @@ main div {
 }
 
 .dog-stats p, .dog-stats h4, .dog-stats li {
+    text-align: center;
+}
+
+.sports-leagues {
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    width: 800px;
+}
+
+.league {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin: 5px;
+}
+
+.league img {
+    display: block;
+    margin: 0 auto;
+    height: 168px;
+}
+
+.league p {
     text-align: center;
 }
