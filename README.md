@@ -33,14 +33,14 @@ Additional considerations:
 
 - There are only so many things we do in an app.
 
-- Here is a list of the 10 major plain JavaScript patterns. (Links to an external site.)
+- [Here is a list of the 10 major plain JavaScript patterns.](https://github.com/alchemycodelab/module-one-curriculum-base/blob/main/PATTERNS.md)
 
 - Let's practice the 'display a list' and 'render function' patterns using data fetched with the `async fetch on load` pattern.
 
 ## Grading Rubric: 2.5 points per array of items displayed on the site.
 
 1. Goal: asynchronously fetch and render 4 separate lists of things to the same index.html file.
-2. Start with the alchemy web template (Links to an external site.). Don't forget to add the supabase CDN to index.html and make a fetch-utils.js with some good copy paste work to set up the supabase client with the KEY and URL.
+2. Start with the [alchemy web template](https://github.com/alchemycodelab/web-template). Don't forget to add the supabase CDN to index.html and make a fetch-utils.js with some good copy paste work to set up the supabase client with the KEY and URL.
 3. Repeat the following process 4 times, with 4 different domains, all in the same template:
     1. Come up with a domain for this data (like 'dogs' or 'candies'). Let's assume you picked 'candies'.
     2. In the supabase.io app, create a 'candies' table, Your table should have at least 4 columns.

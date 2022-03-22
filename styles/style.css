@@ -36,7 +36,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    margin-bottom: 50px;
 }
 
 header {
@@ -92,4 +92,24 @@ footer {
     display: block;
     margin: 0 auto;
     height: 168px;
+}
+
+.rpg-classes {
+    display:flex;
+    flex-flow: wrap;
+}
+
+.rpg-class {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin: 5px;
+}
+
+.rpg-class ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.rpg-class h3 {
+    text-align: center;
 }
