@@ -27,6 +27,14 @@ export async function getDogs() {
     return checkError(response);
 }
 
+export async function getLeagues() {
+    const response = await client
+        .from('sports_leagues')
+        .select('*');
+
+    return checkError(response);
+}
+
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
