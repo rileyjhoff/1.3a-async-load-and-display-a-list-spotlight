@@ -36,21 +36,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
-}
-
-section {
-    background-color: var(--color5);
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    margin-bottom: 50px;
 }
 
 header {
@@ -61,10 +47,13 @@ header {
     box-shadow: var(--shadow);
 }
 
-
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+h3 {
+    text-align: center;
 }
 
 .gutter-right {
@@ -75,10 +64,6 @@ header img {
     height: var(--header-height);
 }
 
-p {
-    margin: var(--gutter);
-}
-  
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +73,120 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+main div {
+    margin: 15px 0px;
+}
+
+.avs-players {
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    width: 800px;
+}
+
+.avs-player {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    width: 253px;
+    margin: 5px;
+}
+
+.avs-player p {
+    text-align: center;
+}
+
+.avs-player img {
+    display: block;
+    margin: 0 auto;
+    height: 168px;
+}
+
+.rpg-classes {
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    width: 800px;
+}
+
+.rpg-class {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin: 5px;
+    height: 275px;
+    width: 182px;
+    position: relative;
+}
+
+.rpg-class ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+.role {
+    position: absolute;
+    top: 85px;
+}
+
+.specialization {
+    position: absolute;
+    bottom: 10px;
+}
+
+.dogs {
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    width: 800px;
+}
+
+.dog {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin: 5px;
+}
+
+.dog-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: grey 1px solid;
+    border-radius: 10px;
+}
+
+.dog-stats p, .dog-stats h4, .dog-stats li {
+    text-align: center;
+}
+
+.sports-leagues {
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    width: 600px;
+}
+
+.league {
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin: 5px;
+    width: 239px;
+}
+
+.league img {
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.league p {
+    text-align: center;
+}
+
+.league-logo {
+    display: flex;
+    align-items: center;
+    height: 168px;
+    width: 200px;
 }
