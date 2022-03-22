@@ -74,11 +74,14 @@ footer {
 .avs-players {
     display:flex;
     flex-flow: wrap;
+    width: 800px;
 }
 
 .avs-player {
     padding: 20px;
     box-shadow: var(--shadow);
+    width: 253px;
+    margin: 5px;
 }
 
 .avs-player p, .avs-player h3 {
